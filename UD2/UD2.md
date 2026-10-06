@@ -464,7 +464,7 @@ Obviamente es un factor relativo al uso pues depende de la carga útil. Muchos f
 - **E**ficiencia del SAI (Ef) (94 %-98 %)
 - **V**oltamperios (VA)
 
-$$\frac{N \times V \times Ah \times Ef}{VA} = \text{AUTONOMÍA (h)}$$
+$$\frac{N \times V \times Ah \times Ef}{P (W)} = \text{AUTONOMÍA (h)}$$
 
 **Ejemplo:**
 
@@ -472,15 +472,17 @@ Tenemos un SAI con una capacidad de 2000 VA y una batería que proporciona 24 V 
 
 ![SAI L-Link](images/sai_l_link.jpg)
 
-1. ¿Cuánto tiempo puede suministrar energía el SAI con el máximo de carga útil?
+1. ¿Cuánto tiempo puede suministrar energía el SAI con el máximo de carga útil (si los equipos conectados consumen toda su capacidad)?
 
-$$\frac{2 \times 12 \times 9 \times 0,96}{2000} = 0,10368h = 6,22min$$
+Tomando como FP el 60%:
+
+$$\frac{2 \times 12 \times 9 \times 0,96}{2000 * 0.6} = 0,1728h$$
+
+Lo multiplicamos por 60 para calcularlo en minutos: $$0,1728 * 60 = 10,36 min$$
 
 2. ¿Y si los dispositivos conectados consumen 250 W?
 
-$$\frac{250}{0,6} = 416,66VA$$
-
-$$\frac{2 \times 12 \times 9 \times 0,96}{416,66} = 0,6635h = 39,81min$$
+$$\frac{2 \times 12 \times 9 \times 0,96}{250 W} = 0,82944h = 49,81min$$
 
 ## 7.2.3. Tiempo de recarga
 
